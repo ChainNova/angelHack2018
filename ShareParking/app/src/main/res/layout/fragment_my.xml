@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/item_text_black_36"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="我的订单"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        style="@style/line"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        style="@style/item_text_black_32"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:gravity="center"
+        android:text="还没有订单哦！"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15"
+        android:paddingEnd="@dimen/margin_8"
+        android:paddingStart="@dimen/margin_8"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title">
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/item_text_black_36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_15"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:text="老王的停车位   8:00_ 12:00  8元"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tv_address"
+            style="@style/item_text_black_32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="老王" />
+
+        <TextView
+            android:id="@+id/tv_payment"
+            style="@style/item_text_black_32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name"
+            android:layout_marginLeft="@dimen/margin_50"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_toRightOf="@+id/tv_address"
+            android:text="已支付"
+            android:textColor="@color/green" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_pending"
+            style="@style/item_text_black_32"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_name"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="@dimen/margin_5"
+            android:gravity="center"
+            android:text="降地锁"
+            android:textColor="@color/blue"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

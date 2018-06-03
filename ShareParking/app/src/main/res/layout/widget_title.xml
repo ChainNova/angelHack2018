@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.angehack.sharedparking.common.TopTitleView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_50">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/img_left"
+            android:layout_width="@dimen/margin_25"
+            android:layout_height="@dimen/margin_25"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:src="@mipmap/arrow_left" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="240dp"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="end"
+            android:gravity="center_vertical|center"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_36px" />
+
+        <ImageView
+            android:id="@+id/img_right_sub"
+            android:layout_width="@dimen/margin_25"
+            android:layout_height="@dimen/margin_25"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/margin_16"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_right_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_16"
+            android:gravity="center_vertical"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+</com.angehack.sharedparking.common.TopTitleView>
